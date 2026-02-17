@@ -45,7 +45,7 @@ cigna_data.csv ├── requirements.txt └── README.md
 1.  Create Virtual Environment (Recommended)
 
 python -m venv venv\
-venv`\Scripts`{=tex}`\activate  `{=tex}
+
 
 2.  Install Dependencies
 
