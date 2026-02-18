@@ -5,9 +5,7 @@ from functools import singledispatch
 from typing import List, Dict
 
 
-# ---------------------------------------------------
-# 1. FUNCTION OVERLOADING USING singledispatch
-# ---------------------------------------------------
+
 
 @singledispatch
 def prepare_dataframe(data):
@@ -32,9 +30,7 @@ def _(data: list) -> pd.DataFrame:
     return pd.DataFrame(data)
 
 
-# ---------------------------------------------------
-# 2. DATA TRANSFORMATION
-# ---------------------------------------------------
+
 
 def transform_data(df: pd.DataFrame, payer: str) -> pd.DataFrame:
     """
@@ -56,9 +52,7 @@ def transform_data(df: pd.DataFrame, payer: str) -> pd.DataFrame:
     return df
 
 
-# ---------------------------------------------------
-# 3. BASE LOADER CLASS
-# ---------------------------------------------------
+
 
 class BaseLoader:
     """
@@ -94,9 +88,7 @@ class PayerLoader(BaseLoader):
             return "GENERIC_CLAIMS"
 
 
-# ---------------------------------------------------
-# 5. ARGUMENT PARSER
-# ---------------------------------------------------
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
@@ -121,9 +113,7 @@ def parse_arguments():
     return parser.parse_args()
 
 
-# ---------------------------------------------------
-# 6. MAIN EXECUTION FLOW
-# ---------------------------------------------------
+
 
 def main():
 
